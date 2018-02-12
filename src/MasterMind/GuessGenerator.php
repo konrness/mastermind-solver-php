@@ -38,6 +38,8 @@ class GuessGenerator
 
         $guesses = [];
 
+        // @todo Refactor to support arbitrary number of pegs and use $numPegs parameter
+
         for ($peg1 = 0; $peg1 < $numColors; $peg1++) {
             for ($peg2 = 0; $peg2 < $numColors; $peg2++) {
                 for ($peg3 = 0; $peg3 < $numColors; $peg3++) {
@@ -47,6 +49,8 @@ class GuessGenerator
                 }
             }
         }
+
+        // @todo Implement $duplicatesAllowed parameter
 
         if ($duplicatesAllowed === false) {
             throw new \InvalidArgumentException("No duplicates not yet implemented");

@@ -44,7 +44,7 @@ class Row
     {
         $correctColumns = [];
 
-        // count correct color/column
+        // count correct color AND correct column
         foreach ($this->colors as $column => $color) {
             if ($color === $guess->colors[$column]) {
                 $correctColumns[] = $column;
